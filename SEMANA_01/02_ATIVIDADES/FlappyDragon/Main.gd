@@ -2,7 +2,7 @@ extends Node # instancia a classe Node2D
 
 var status = 1 # avisa que o jogador está jogando
 var vscore = 0 # variável de pontuação
-var x = 6 #ficou mais rápido, variável de velocidade horizontal
+var x = 10 #ficou mais rápido, variável de velocidade horizontal
 var y = 1.5 # variável que controla a velocidade de queda
 
 # executa essa função ao carregar o jogo
