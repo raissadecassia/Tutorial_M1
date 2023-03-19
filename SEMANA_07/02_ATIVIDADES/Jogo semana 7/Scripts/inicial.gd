@@ -1,11 +1,6 @@
 extends Control
 
 
-func _on_ButtonQuit_pressed():
-#jogo é fechado quando o botão for apertado
-	get_tree().quit()
-
-
 func _on_ButtonTutorial_pressed():
 #abre a tela de tutorial quando o botão é apertado
 	var tutorialScreen = load("res://Scene/Tutorial.tscn").instance()
