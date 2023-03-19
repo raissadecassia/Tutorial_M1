@@ -1,0 +1,56 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Arara voando_resized.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Arara azul voando.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Arara voando_resized (1).png" type="Texture" id=3]
+[ext_resource path="res://Assets/Arara azul voando esquerda.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Arara.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Arara voando para cima 2_resized.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Arara azul voando para cima.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Arara azul voando para baixo.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Arara voando para baixo_resized.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Arara azul.png" type="Texture" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 30.0167
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Stop",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Up",
+"speed": 5.0
+} ]
+
+[node name="Arara" type="KinematicBody2D"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.999998, -3 )
+scale = Vector2( 0.129856, 0.133673 )
+frames = SubResource( 2 )
+animation = "Up"
+playing = true
